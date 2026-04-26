@@ -1,0 +1,403 @@
+cenario,tamanho_label,n,algoritmo,repeticao,tempo_s,comparacoes,trocas,ordenado,status
+aleatoria pequena,pequena,1000,Insertion Sort,1,0.084751,256711,255723,1,ok
+aleatoria pequena,pequena,1000,Selection Sort,1,0.091300,499500,991,1,ok
+aleatoria pequena,pequena,1000,Shell Sort,1,0.003889,13635,8619,1,ok
+aleatoria pequena,pequena,1000,Merge Sort,1,0.003828,8678,9352,1,ok
+aleatoria pequena,pequena,1000,Quick Sort,1,0.004707,10421,9568,1,ok
+aleatoria pequena,pequena,1000,Radix Sort,1,0.002929,999,13000,1,ok
+aleatoria pequena,pequena,1000,Insertion Sort,2,0.074400,258098,257103,1,ok
+aleatoria pequena,pequena,1000,Selection Sort,2,0.089145,499500,991,1,ok
+aleatoria pequena,pequena,1000,Shell Sort,2,0.003956,14012,8983,1,ok
+aleatoria pequena,pequena,1000,Merge Sort,2,0.003809,8726,9367,1,ok
+aleatoria pequena,pequena,1000,Quick Sort,2,0.004810,10254,9424,1,ok
+aleatoria pequena,pequena,1000,Radix Sort,2,0.002902,999,13000,1,ok
+aleatoria pequena,pequena,1000,Insertion Sort,3,0.073548,255898,254907,1,ok
+aleatoria pequena,pequena,1000,Selection Sort,3,0.088770,499500,993,1,ok
+aleatoria pequena,pequena,1000,Shell Sort,3,0.003895,13795,8781,1,ok
+aleatoria pequena,pequena,1000,Merge Sort,3,0.003761,8716,9370,1,ok
+aleatoria pequena,pequena,1000,Quick Sort,3,0.004827,10484,9641,1,ok
+aleatoria pequena,pequena,1000,Radix Sort,3,0.002869,999,13000,1,ok
+crescente,pequena,1000,Insertion Sort,1,0.000232,999,0,1,ok
+crescente,pequena,1000,Selection Sort,1,0.088589,499500,0,1,ok
+crescente,pequena,1000,Shell Sort,1,0.001542,5457,0,1,ok
+crescente,pequena,1000,Merge Sort,1,0.003262,5052,5068,1,ok
+crescente,pequena,1000,Quick Sort,1,0.006196,10361,9650,1,ok
+crescente,pequena,1000,Radix Sort,1,0.002457,999,9000,1,ok
+crescente,pequena,1000,Insertion Sort,2,0.000285,999,0,1,ok
+crescente,pequena,1000,Selection Sort,2,0.100450,499500,0,1,ok
+crescente,pequena,1000,Shell Sort,2,0.001208,5457,0,1,ok
+crescente,pequena,1000,Merge Sort,2,0.002299,5052,5068,1,ok
+crescente,pequena,1000,Quick Sort,2,0.004769,10743,10047,1,ok
+crescente,pequena,1000,Radix Sort,2,0.001964,999,9000,1,ok
+crescente,pequena,1000,Insertion Sort,3,0.000234,999,0,1,ok
+crescente,pequena,1000,Selection Sort,3,0.087461,499500,0,1,ok
+crescente,pequena,1000,Shell Sort,3,0.001170,5457,0,1,ok
+crescente,pequena,1000,Merge Sort,3,0.002810,5052,5068,1,ok
+crescente,pequena,1000,Quick Sort,3,0.006079,11105,10411,1,ok
+crescente,pequena,1000,Radix Sort,3,0.002602,999,9000,1,ok
+crescente,media,10000,Insertion Sort,1,0.002785,9999,0,1,ok
+crescente,media,10000,Selection Sort,1,8.938150,49995000,0,1,ok
+crescente,media,10000,Shell Sort,1,0.015957,75243,0,1,ok
+crescente,media,10000,Merge Sort,1,0.032003,71712,75392,1,ok
+crescente,media,10000,Quick Sort,1,0.067078,146796,139813,1,ok
+crescente,media,10000,Radix Sort,1,0.024563,9999,110000,1,ok
+crescente,media,10000,Insertion Sort,2,0.002279,9999,0,1,ok
+crescente,media,10000,Selection Sort,2,8.975821,49995000,0,1,ok
+crescente,media,10000,Shell Sort,2,0.015953,75243,0,1,ok
+crescente,media,10000,Merge Sort,2,0.032052,71712,75392,1,ok
+crescente,media,10000,Quick Sort,2,0.069553,149079,142004,1,ok
+crescente,media,10000,Radix Sort,2,0.024559,9999,110000,1,ok
+crescente,media,10000,Insertion Sort,3,0.002287,9999,0,1,ok
+crescente,media,10000,Selection Sort,3,8.963821,49995000,0,1,ok
+crescente,media,10000,Shell Sort,3,0.015898,75243,0,1,ok
+crescente,media,10000,Merge Sort,3,0.032371,71712,75392,1,ok
+crescente,media,10000,Quick Sort,3,0.067323,146798,139784,1,ok
+crescente,media,10000,Radix Sort,3,0.024312,9999,110000,1,ok
+crescente,grande,50000,Insertion Sort,1,0.011411,49999,0,1,ok
+crescente,grande,50000,Selection Sort,1,224.659747,1249975000,0,1,ok
+crescente,grande,50000,Shell Sort,1,0.095890,455719,0,1,ok
+crescente,grande,50000,Merge Sort,1,0.192455,413984,417488,1,ok
+crescente,grande,50000,Quick Sort,1,0.424579,874408,838198,1,ok
+crescente,grande,50000,Radix Sort,1,0.122677,49999,550000,1,ok
+crescente,grande,50000,Insertion Sort,2,0.011240,49999,0,1,ok
+crescente,grande,50000,Selection Sort,2,223.850107,1249975000,0,1,ok
+crescente,grande,50000,Shell Sort,2,0.096034,455719,0,1,ok
+crescente,grande,50000,Merge Sort,2,0.189426,413984,417488,1,ok
+crescente,grande,50000,Quick Sort,2,0.420332,877943,841804,1,ok
+crescente,grande,50000,Radix Sort,2,0.145001,49999,650000,1,ok
+crescente,grande,50000,Insertion Sort,3,0.011142,49999,0,1,ok
+crescente,grande,50000,Selection Sort,3,215.748614,1249975000,0,1,ok
+crescente,grande,50000,Shell Sort,3,0.096837,455719,0,1,ok
+crescente,grande,50000,Merge Sort,3,0.182225,413984,417488,1,ok
+crescente,grande,50000,Quick Sort,3,0.403147,863638,827311,1,ok
+crescente,grande,50000,Radix Sort,3,0.152569,49999,650000,1,ok
+decrescente,pequena,1000,Insertion Sort,1,0.152558,499458,499265,1,ok
+decrescente,pequena,1000,Selection Sort,1,0.099991,499500,564,1,ok
+decrescente,pequena,1000,Shell Sort,1,0.002889,8443,3813,1,ok
+decrescente,pequena,1000,Merge Sort,1,0.003316,5049,9904,1,ok
+decrescente,pequena,1000,Quick Sort,1,0.004838,10718,10002,1,ok
+decrescente,pequena,1000,Radix Sort,1,0.002028,999,9000,1,ok
+decrescente,pequena,1000,Insertion Sort,2,0.145802,499432,499219,1,ok
+decrescente,pequena,1000,Selection Sort,2,0.101185,499500,577,1,ok
+decrescente,pequena,1000,Shell Sort,2,0.002315,8407,3774,1,ok
+decrescente,pequena,1000,Merge Sort,2,0.003303,5033,9866,1,ok
+decrescente,pequena,1000,Quick Sort,2,0.004888,10831,10081,1,ok
+decrescente,pequena,1000,Radix Sort,2,0.001975,999,9000,1,ok
+decrescente,pequena,1000,Insertion Sort,3,0.141584,499453,499258,1,ok
+decrescente,pequena,1000,Selection Sort,3,0.089668,499500,576,1,ok
+decrescente,pequena,1000,Shell Sort,3,0.002225,8406,3775,1,ok
+decrescente,pequena,1000,Merge Sort,3,0.003152,5031,9889,1,ok
+decrescente,pequena,1000,Quick Sort,3,0.004750,10532,9793,1,ok
+decrescente,pequena,1000,Radix Sort,3,0.002038,999,9000,1,ok
+decrescente,media,10000,Insertion Sort,1,14.623737,49994520,49992535,1,ok
+decrescente,media,10000,Selection Sort,1,8.997986,49995000,5737,1,ok
+decrescente,media,10000,Shell Sort,1,0.030773,118980,52494,1,ok
+decrescente,media,10000,Merge Sort,1,0.044690,65699,138880,1,ok
+decrescente,media,10000,Quick Sort,1,0.080767,152392,145430,1,ok
+decrescente,media,10000,Radix Sort,1,0.025917,9999,110000,1,ok
+decrescente,media,10000,Insertion Sort,2,14.591329,49994570,49992552,1,ok
+decrescente,media,10000,Selection Sort,2,8.989232,49995000,5698,1,ok
+decrescente,media,10000,Shell Sort,2,0.030826,118908,52420,1,ok
+decrescente,media,10000,Merge Sort,2,0.042870,65705,138871,1,ok
+decrescente,media,10000,Quick Sort,2,0.068389,149980,143087,1,ok
+decrescente,media,10000,Radix Sort,2,0.024070,9999,110000,1,ok
+decrescente,media,10000,Insertion Sort,3,14.649949,49994452,49992405,1,ok
+decrescente,media,10000,Selection Sort,3,9.041946,49995000,5693,1,ok
+decrescente,media,10000,Shell Sort,3,0.030776,118912,52426,1,ok
+decrescente,media,10000,Merge Sort,3,0.043574,65701,138808,1,ok
+decrescente,media,10000,Quick Sort,3,0.069673,152177,145149,1,ok
+decrescente,media,10000,Radix Sort,3,0.024178,9999,110000,1,ok
+decrescente,grande,50000,Insertion Sort,1,371.083355,1249972552,1249962609,1,ok
+decrescente,grande,50000,Selection Sort,1,227.278361,1249975000,28679,1,ok
+decrescente,grande,50000,Shell Sort,1,0.186636,683224,264774,1,ok
+decrescente,grande,50000,Merge Sort,1,0.260652,387998,794439,1,ok
+decrescente,grande,50000,Quick Sort,1,0.433349,880557,845587,1,ok
+decrescente,grande,50000,Radix Sort,1,0.144792,49999,650000,1,ok
+decrescente,grande,50000,Insertion Sort,2,370.613081,1249972554,1249962491,1,ok
+decrescente,grande,50000,Selection Sort,2,226.884047,1249975000,28569,1,ok
+decrescente,grande,50000,Shell Sort,2,0.173860,683102,264652,1,ok
+decrescente,grande,50000,Merge Sort,2,0.267864,388110,794412,1,ok
+decrescente,grande,50000,Quick Sort,2,0.408259,877584,842735,1,ok
+decrescente,grande,50000,Radix Sort,2,0.122378,49999,550000,1,ok
+decrescente,grande,50000,Insertion Sort,3,369.585367,1249972441,1249962457,1,ok
+decrescente,grande,50000,Selection Sort,3,226.910444,1249975000,28600,1,ok
+decrescente,grande,50000,Shell Sort,3,0.174379,683218,264768,1,ok
+decrescente,grande,50000,Merge Sort,3,0.245337,387947,794341,1,ok
+decrescente,grande,50000,Quick Sort,3,0.412741,890903,855478,1,ok
+decrescente,grande,50000,Radix Sort,3,0.145395,49999,650000,1,ok
+repetido,pequena,1000,Insertion Sort,1,0.000263,999,0,1,ok
+repetido,pequena,1000,Selection Sort,1,0.087433,499500,0,1,ok
+repetido,pequena,1000,Shell Sort,1,0.001111,5457,0,1,ok
+repetido,pequena,1000,Merge Sort,1,0.002278,5052,5068,1,ok
+repetido,pequena,1000,Quick Sort,1,0.000312,1002,1,1,ok
+repetido,pequena,1000,Radix Sort,1,0.002816,999,13000,1,ok
+repetido,pequena,1000,Insertion Sort,2,0.000239,999,0,1,ok
+repetido,pequena,1000,Selection Sort,2,0.088359,499500,0,1,ok
+repetido,pequena,1000,Shell Sort,2,0.001130,5457,0,1,ok
+repetido,pequena,1000,Merge Sort,2,0.002263,5052,5068,1,ok
+repetido,pequena,1000,Quick Sort,2,0.000306,1002,1,1,ok
+repetido,pequena,1000,Radix Sort,2,0.002917,999,13000,1,ok
+repetido,pequena,1000,Insertion Sort,3,0.000231,999,0,1,ok
+repetido,pequena,1000,Selection Sort,3,0.087772,499500,0,1,ok
+repetido,pequena,1000,Shell Sort,3,0.001108,5457,0,1,ok
+repetido,pequena,1000,Merge Sort,3,0.002253,5052,5068,1,ok
+repetido,pequena,1000,Quick Sort,3,0.000300,1002,1,1,ok
+repetido,pequena,1000,Radix Sort,3,0.003063,999,13000,1,ok
+repetido,media,10000,Insertion Sort,1,0.002270,9999,0,1,ok
+repetido,media,10000,Selection Sort,1,8.833847,49995000,0,1,ok
+repetido,media,10000,Shell Sort,1,0.015424,75243,0,1,ok
+repetido,media,10000,Merge Sort,1,0.031963,71712,75392,1,ok
+repetido,media,10000,Quick Sort,1,0.002844,10002,1,1,ok
+repetido,media,10000,Radix Sort,1,0.023714,9999,110000,1,ok
+repetido,media,10000,Insertion Sort,2,0.002283,9999,0,1,ok
+repetido,media,10000,Selection Sort,2,8.851772,49995000,0,1,ok
+repetido,media,10000,Shell Sort,2,0.015413,75243,0,1,ok
+repetido,media,10000,Merge Sort,2,0.032035,71712,75392,1,ok
+repetido,media,10000,Quick Sort,2,0.002834,10002,1,1,ok
+repetido,media,10000,Radix Sort,2,0.023858,9999,110000,1,ok
+repetido,media,10000,Insertion Sort,3,0.002237,9999,0,1,ok
+repetido,media,10000,Selection Sort,3,8.842219,49995000,0,1,ok
+repetido,media,10000,Shell Sort,3,0.015636,75243,0,1,ok
+repetido,media,10000,Merge Sort,3,0.032143,71712,75392,1,ok
+repetido,media,10000,Quick Sort,3,0.002833,10002,1,1,ok
+repetido,media,10000,Radix Sort,3,0.034749,9999,130000,1,ok
+repetido,pequena,1000,Insertion Sort,1,0.000316,999,0,1,ok
+repetido,pequena,1000,Selection Sort,1,0.091201,499500,0,1,ok
+repetido,pequena,1000,Shell Sort,1,0.001170,5457,0,1,ok
+repetido,pequena,1000,Merge Sort,1,0.002577,5052,5068,1,ok
+repetido,pequena,1000,Quick Sort,1,0.000340,1002,1,1,ok
+repetido,pequena,1000,Radix Sort,1,0.002913,999,13000,1,ok
+repetido,pequena,1000,Insertion Sort,2,0.000233,999,0,1,ok
+repetido,pequena,1000,Selection Sort,2,0.094282,499500,0,1,ok
+repetido,pequena,1000,Shell Sort,2,0.001159,5457,0,1,ok
+repetido,pequena,1000,Merge Sort,2,0.002481,5052,5068,1,ok
+repetido,pequena,1000,Quick Sort,2,0.000318,1002,1,1,ok
+repetido,pequena,1000,Radix Sort,2,0.002900,999,13000,1,ok
+repetido,pequena,1000,Insertion Sort,3,0.000230,999,0,1,ok
+repetido,pequena,1000,Selection Sort,3,0.088262,499500,0,1,ok
+repetido,pequena,1000,Shell Sort,3,0.001364,5457,0,1,ok
+repetido,pequena,1000,Merge Sort,3,0.002397,5052,5068,1,ok
+repetido,pequena,1000,Quick Sort,3,0.000311,1002,1,1,ok
+repetido,pequena,1000,Radix Sort,3,0.003129,999,13000,1,ok
+repetido,media,10000,Insertion Sort,1,0.002218,9999,0,1,ok
+repetido,media,10000,Selection Sort,1,9.086222,49995000,0,1,ok
+repetido,media,10000,Shell Sort,1,0.015510,75243,0,1,ok
+repetido,media,10000,Merge Sort,1,0.034964,71712,75392,1,ok
+repetido,media,10000,Quick Sort,1,0.002874,10002,1,1,ok
+repetido,media,10000,Radix Sort,1,0.029620,9999,130000,1,ok
+repetido,media,10000,Insertion Sort,2,0.002259,9999,0,1,ok
+repetido,media,10000,Selection Sort,2,9.077943,49995000,0,1,ok
+repetido,media,10000,Shell Sort,2,0.016199,75243,0,1,ok
+repetido,media,10000,Merge Sort,2,0.033163,71712,75392,1,ok
+repetido,media,10000,Quick Sort,2,0.002828,10002,1,1,ok
+repetido,media,10000,Radix Sort,2,0.029058,9999,130000,1,ok
+repetido,media,10000,Insertion Sort,3,0.002287,9999,0,1,ok
+repetido,media,10000,Selection Sort,3,9.106232,49995000,0,1,ok
+repetido,media,10000,Shell Sort,3,0.015620,75243,0,1,ok
+repetido,media,10000,Merge Sort,3,0.034319,71712,75392,1,ok
+repetido,media,10000,Quick Sort,3,0.002822,10002,1,1,ok
+repetido,media,10000,Radix Sort,3,0.029334,9999,130000,1,ok
+repetido,grande,50000,Insertion Sort,1,0.011215,49999,0,1,ok
+repetido,grande,50000,Selection Sort,1,224.501475,1249975000,0,1,ok
+repetido,grande,50000,Shell Sort,1,0.108112,455719,0,1,ok
+repetido,grande,50000,Merge Sort,1,0.192252,413984,417488,1,ok
+repetido,grande,50000,Quick Sort,1,0.014097,50002,1,1,ok
+repetido,grande,50000,Radix Sort,1,0.159677,49999,650000,1,ok
+repetido,grande,50000,Insertion Sort,2,0.011221,49999,0,1,ok
+repetido,grande,50000,Selection Sort,2,224.581232,1249975000,0,1,ok
+repetido,grande,50000,Shell Sort,2,0.094428,455719,0,1,ok
+repetido,grande,50000,Merge Sort,2,0.197900,413984,417488,1,ok
+repetido,grande,50000,Quick Sort,2,0.014042,50002,1,1,ok
+repetido,grande,50000,Radix Sort,2,0.155954,49999,650000,1,ok
+repetido,grande,50000,Insertion Sort,3,0.011370,49999,0,1,ok
+repetido,grande,50000,Selection Sort,3,224.990203,1249975000,0,1,ok
+repetido,grande,50000,Shell Sort,3,0.097062,455719,0,1,ok
+repetido,grande,50000,Merge Sort,3,0.207022,413984,417488,1,ok
+repetido,grande,50000,Quick Sort,3,0.014066,50002,1,1,ok
+repetido,grande,50000,Radix Sort,3,0.157349,49999,650000,1,ok
+vazia,pequena,0,Insertion Sort,1,0.000068,0,0,1,ok
+vazia,pequena,0,Selection Sort,1,0.000015,0,0,1,ok
+vazia,pequena,0,Shell Sort,1,0.000011,0,0,1,ok
+vazia,pequena,0,Merge Sort,1,0.000009,0,0,1,ok
+vazia,pequena,0,Quick Sort,1,0.000008,0,0,1,ok
+vazia,pequena,0,Radix Sort,1,0.000008,0,0,1,ok
+vazia,pequena,0,Insertion Sort,2,0.000008,0,0,1,ok
+vazia,pequena,0,Selection Sort,2,0.000008,0,0,1,ok
+vazia,pequena,0,Shell Sort,2,0.000008,0,0,1,ok
+vazia,pequena,0,Merge Sort,2,0.000008,0,0,1,ok
+vazia,pequena,0,Quick Sort,2,0.000008,0,0,1,ok
+vazia,pequena,0,Radix Sort,2,0.000008,0,0,1,ok
+vazia,pequena,0,Insertion Sort,3,0.000009,0,0,1,ok
+vazia,pequena,0,Selection Sort,3,0.000009,0,0,1,ok
+vazia,pequena,0,Shell Sort,3,0.000008,0,0,1,ok
+vazia,pequena,0,Merge Sort,3,0.000008,0,0,1,ok
+vazia,pequena,0,Quick Sort,3,0.000008,0,0,1,ok
+vazia,pequena,0,Radix Sort,3,0.000007,0,0,1,ok
+um item,pequena,1,Insertion Sort,1,0.000013,0,0,1,ok
+um item,pequena,1,Selection Sort,1,0.000009,0,0,1,ok
+um item,pequena,1,Shell Sort,1,0.000008,0,0,1,ok
+um item,pequena,1,Merge Sort,1,0.000008,0,0,1,ok
+um item,pequena,1,Quick Sort,1,0.000010,0,0,1,ok
+um item,pequena,1,Radix Sort,1,0.000009,0,0,1,ok
+um item,pequena,1,Insertion Sort,2,0.000013,0,0,1,ok
+um item,pequena,1,Selection Sort,2,0.000010,0,0,1,ok
+um item,pequena,1,Shell Sort,2,0.000008,0,0,1,ok
+um item,pequena,1,Merge Sort,2,0.000008,0,0,1,ok
+um item,pequena,1,Quick Sort,2,0.000007,0,0,1,ok
+um item,pequena,1,Radix Sort,2,0.000008,0,0,1,ok
+um item,pequena,1,Insertion Sort,3,0.000009,0,0,1,ok
+um item,pequena,1,Selection Sort,3,0.000008,0,0,1,ok
+um item,pequena,1,Shell Sort,3,0.000007,0,0,1,ok
+um item,pequena,1,Merge Sort,3,0.000008,0,0,1,ok
+um item,pequena,1,Quick Sort,3,0.000007,0,0,1,ok
+um item,pequena,1,Radix Sort,3,0.000007,0,0,1,ok
+muitos repetidos,pequena,1000,Insertion Sort,1,0.070135,230253,229256,1,ok
+muitos repetidos,pequena,1000,Selection Sort,1,0.096647,499500,888,1,ok
+muitos repetidos,pequena,1000,Shell Sort,1,0.002210,8219,3103,1,ok
+muitos repetidos,pequena,1000,Merge Sort,1,0.003741,8512,8991,1,ok
+muitos repetidos,pequena,1000,Quick Sort,1,0.001559,3357,2347,1,ok
+muitos repetidos,pequena,1000,Radix Sort,1,0.003148,999,13000,1,ok
+muitos repetidos,pequena,1000,Insertion Sort,2,0.064562,219181,218184,1,ok
+muitos repetidos,pequena,1000,Selection Sort,2,0.089891,499500,894,1,ok
+muitos repetidos,pequena,1000,Shell Sort,2,0.002310,8405,3263,1,ok
+muitos repetidos,pequena,1000,Merge Sort,2,0.003635,8478,8974,1,ok
+muitos repetidos,pequena,1000,Quick Sort,2,0.001427,3155,2145,1,ok
+muitos repetidos,pequena,1000,Radix Sort,2,0.002844,999,13000,1,ok
+muitos repetidos,pequena,1000,Insertion Sort,3,0.065301,225352,224353,1,ok
+muitos repetidos,pequena,1000,Selection Sort,3,0.099739,499500,900,1,ok
+muitos repetidos,pequena,1000,Shell Sort,3,0.002337,8576,3444,1,ok
+muitos repetidos,pequena,1000,Merge Sort,3,0.003667,8536,9059,1,ok
+muitos repetidos,pequena,1000,Quick Sort,3,0.001659,3595,2585,1,ok
+muitos repetidos,pequena,1000,Radix Sort,3,0.002860,999,13000,1,ok
+muitos repetidos,media,10000,Insertion Sort,1,6.969582,22396949,22386951,1,ok
+muitos repetidos,media,10000,Selection Sort,1,8.982161,49995000,9031,1,ok
+muitos repetidos,media,10000,Shell Sort,1,0.028309,110270,38302,1,ok
+muitos repetidos,media,10000,Merge Sort,1,0.049997,120215,128778,1,ok
+muitos repetidos,media,10000,Quick Sort,1,0.013523,31193,21183,1,ok
+muitos repetidos,media,10000,Radix Sort,1,0.029504,9999,130000,1,ok
+muitos repetidos,media,10000,Insertion Sort,2,6.725686,22477577,22467579,1,ok
+muitos repetidos,media,10000,Selection Sort,2,9.039258,49995000,8975,1,ok
+muitos repetidos,media,10000,Shell Sort,2,0.027510,107681,35751,1,ok
+muitos repetidos,media,10000,Merge Sort,2,0.050007,120022,128734,1,ok
+muitos repetidos,media,10000,Quick Sort,2,0.014600,33636,23626,1,ok
+muitos repetidos,media,10000,Radix Sort,2,0.029361,9999,130000,1,ok
+muitos repetidos,media,10000,Insertion Sort,3,6.732067,22631569,22621571,1,ok
+muitos repetidos,media,10000,Selection Sort,3,8.949428,49995000,8998,1,ok
+muitos repetidos,media,10000,Shell Sort,3,0.027892,108712,36845,1,ok
+muitos repetidos,media,10000,Merge Sort,3,0.050594,120020,128706,1,ok
+muitos repetidos,media,10000,Quick Sort,3,0.013818,32066,22056,1,ok
+muitos repetidos,media,10000,Radix Sort,3,0.033708,9999,130000,1,ok
+muitos repetidos,grande,50000,Insertion Sort,1,169.509492,562602351,562552356,1,ok
+muitos repetidos,grande,50000,Selection Sort,1,227.905963,1249975000,45091,1,ok
+muitos repetidos,grande,50000,Shell Sort,1,0.161502,623560,185530,1,ok
+muitos repetidos,grande,50000,Merge Sort,1,0.289105,709918,738110,1,ok
+muitos repetidos,grande,50000,Quick Sort,1,0.067496,155228,105218,1,ok
+muitos repetidos,grande,50000,Radix Sort,1,0.166804,49999,650000,1,ok
+muitos repetidos,grande,50000,Insertion Sort,2,172.308625,561372959,561322961,1,ok
+muitos repetidos,grande,50000,Selection Sort,2,225.056565,1249975000,45014,1,ok
+muitos repetidos,grande,50000,Shell Sort,2,0.183169,632205,194126,1,ok
+muitos repetidos,grande,50000,Merge Sort,2,0.287861,709121,736960,1,ok
+muitos repetidos,grande,50000,Quick Sort,2,0.075597,170098,120088,1,ok
+muitos repetidos,grande,50000,Radix Sort,2,0.149491,49999,650000,1,ok
+muitos repetidos,grande,50000,Insertion Sort,3,167.340989,561167800,561117803,1,ok
+muitos repetidos,grande,50000,Selection Sort,3,224.938408,1249975000,45013,1,ok
+muitos repetidos,grande,50000,Shell Sort,3,0.159784,624475,186459,1,ok
+muitos repetidos,grande,50000,Merge Sort,3,0.307031,709180,737312,1,ok
+muitos repetidos,grande,50000,Quick Sort,3,0.067247,154915,104905,1,ok
+muitos repetidos,grande,50000,Radix Sort,3,0.149142,49999,650000,1,ok
+longa,media,10000,Insertion Sort,1,7.457472,25065145,25055153,1,ok
+longa,media,10000,Selection Sort,1,8.885035,49995000,9994,1,ok
+longa,media,10000,Shell Sort,1,0.067413,234683,163772,1,ok
+longa,media,10000,Merge Sort,1,0.052601,123693,133746,1,ok
+longa,media,10000,Quick Sort,1,0.068608,145840,137516,1,ok
+longa,media,10000,Radix Sort,1,0.029353,9999,130000,1,ok
+longa,media,10000,Insertion Sort,2,7.368847,24833549,24823560,1,ok
+longa,media,10000,Selection Sort,2,8.912683,49995000,9995,1,ok
+longa,media,10000,Shell Sort,2,0.071043,245062,174154,1,ok
+longa,media,10000,Merge Sort,2,0.058181,123675,133672,1,ok
+longa,media,10000,Quick Sort,2,0.068880,145805,137499,1,ok
+longa,media,10000,Radix Sort,2,0.029758,9999,130000,1,ok
+longa,media,10000,Insertion Sort,3,7.444468,24996065,24986074,1,ok
+longa,media,10000,Selection Sort,3,8.895873,49995000,9985,1,ok
+longa,media,10000,Shell Sort,3,0.066475,231412,160546,1,ok
+longa,media,10000,Merge Sort,3,0.057390,123789,133718,1,ok
+longa,media,10000,Quick Sort,3,0.068080,143229,134937,1,ok
+longa,media,10000,Radix Sort,3,0.029470,9999,130000,1,ok
+longa,grande,50000,Insertion Sort,1,189.158568,625589490,625539505,1,ok
+longa,grande,50000,Selection Sort,1,224.783931,1249975000,49988,1,ok
+longa,grande,50000,Shell Sort,1,0.515108,1709983,1277220,1,ok
+longa,grande,50000,Merge Sort,1,0.321870,733320,768519,1,ok
+longa,grande,50000,Quick Sort,1,0.450707,910876,869113,1,ok
+longa,grande,50000,Radix Sort,1,0.152839,49999,650000,1,ok
+longa,grande,50000,Insertion Sort,2,189.745787,624601737,624551750,1,ok
+longa,grande,50000,Selection Sort,2,225.208598,1249975000,49990,1,ok
+longa,grande,50000,Shell Sort,2,0.509825,1731852,1298926,1,ok
+longa,grande,50000,Merge Sort,2,0.304736,733205,768162,1,ok
+longa,grande,50000,Quick Sort,2,0.425270,890944,849274,1,ok
+longa,grande,50000,Radix Sort,2,0.152186,49999,650000,1,ok
+longa,grande,50000,Insertion Sort,3,189.023293,623543485,623493498,1,ok
+longa,grande,50000,Selection Sort,3,225.241970,1249975000,49988,1,ok
+longa,grande,50000,Shell Sort,3,0.531492,1799607,1366773,1,ok
+longa,grande,50000,Merge Sort,3,0.305151,733257,768427,1,ok
+longa,grande,50000,Quick Sort,3,0.408028,853995,812273,1,ok
+longa,grande,50000,Radix Sort,3,0.162381,49999,650000,1,ok
+crescente,super_grande,100000,Shell Sort,1,0.222258,967146,0,1,ok
+crescente,super_grande,100000,Merge Sort,1,0.406786,877968,884976,1,ok
+crescente,super_grande,100000,Quick Sort,1,0.916505,1829943,1756842,1,ok
+crescente,super_grande,100000,Radix Sort,1,0.302638,99999,1300000,1,ok
+crescente,super_grande,100000,Shell Sort,2,0.205009,967146,0,1,ok
+crescente,super_grande,100000,Merge Sort,2,0.377534,877968,884976,1,ok
+crescente,super_grande,100000,Quick Sort,2,0.907528,1811568,1738320,1,ok
+crescente,super_grande,100000,Radix Sort,2,0.307539,99999,1300000,1,ok
+crescente,super_grande,100000,Shell Sort,3,0.224180,967146,0,1,ok
+crescente,super_grande,100000,Merge Sort,3,0.380183,877968,884976,1,ok
+crescente,super_grande,100000,Quick Sort,3,0.868755,1838070,1764309,1,ok
+crescente,super_grande,100000,Radix Sort,3,0.330720,99999,1300000,1,ok
+decrescente,super_grande,100000,Shell Sort,1,0.390442,1521064,607224,1,ok
+decrescente,super_grande,100000,Merge Sort,1,0.552685,826118,1689008,1,ok
+decrescente,super_grande,100000,Quick Sort,1,0.918456,1847330,1776318,1,ok
+decrescente,super_grande,100000,Radix Sort,1,0.329081,99999,1300000,1,ok
+decrescente,super_grande,100000,Shell Sort,2,0.393678,1521126,607283,1,ok
+decrescente,super_grande,100000,Merge Sort,2,0.552134,825968,1688799,1,ok
+decrescente,super_grande,100000,Quick Sort,2,0.900247,1866746,1794996,1,ok
+decrescente,super_grande,100000,Radix Sort,2,0.306835,99999,1300000,1,ok
+decrescente,super_grande,100000,Shell Sort,3,0.414162,1521053,607213,1,ok
+decrescente,super_grande,100000,Merge Sort,3,0.535841,826048,1688701,1,ok
+decrescente,super_grande,100000,Quick Sort,3,0.899183,1858870,1787507,1,ok
+decrescente,super_grande,100000,Radix Sort,3,0.332261,99999,1300000,1,ok
+repetido,super_grande,100000,Shell Sort,1,0.239420,967146,0,1,ok
+repetido,super_grande,100000,Merge Sort,1,0.404301,877968,884976,1,ok
+repetido,super_grande,100000,Quick Sort,1,0.028416,100002,1,1,ok
+repetido,super_grande,100000,Radix Sort,1,0.297749,99999,1300000,1,ok
+repetido,super_grande,100000,Shell Sort,2,0.203884,967146,0,1,ok
+repetido,super_grande,100000,Merge Sort,2,0.410550,877968,884976,1,ok
+repetido,super_grande,100000,Quick Sort,2,0.039690,100002,1,1,ok
+repetido,super_grande,100000,Radix Sort,2,0.344513,99999,1300000,1,ok
+repetido,super_grande,100000,Shell Sort,3,0.229397,967146,0,1,ok
+repetido,super_grande,100000,Merge Sort,3,0.387410,877968,884976,1,ok
+repetido,super_grande,100000,Quick Sort,3,0.028782,100002,1,1,ok
+repetido,super_grande,100000,Radix Sort,3,0.246190,99999,1100000,1,ok
+muitos repetidos,super_grande,100000,Shell Sort,1,0.452898,1319935,384055,1,ok
+muitos repetidos,super_grande,100000,Merge Sort,1,0.629530,1514684,1570990,1,ok
+muitos repetidos,super_grande,100000,Quick Sort,1,0.170627,360104,260094,1,ok
+muitos repetidos,super_grande,100000,Radix Sort,1,0.301119,99999,1300000,1,ok
+muitos repetidos,super_grande,100000,Shell Sort,2,0.381199,1324430,388599,1,ok
+muitos repetidos,super_grande,100000,Merge Sort,2,0.617660,1513883,1569517,1,ok
+muitos repetidos,super_grande,100000,Quick Sort,2,0.137053,309899,209889,1,ok
+muitos repetidos,super_grande,100000,Radix Sort,2,0.314748,99999,1300000,1,ok
+muitos repetidos,super_grande,100000,Shell Sort,3,0.366921,1322913,387029,1,ok
+muitos repetidos,super_grande,100000,Merge Sort,3,0.659150,1514101,1570498,1,ok
+muitos repetidos,super_grande,100000,Quick Sort,3,0.134428,299917,199907,1,ok
+muitos repetidos,super_grande,100000,Radix Sort,3,0.313017,99999,1300000,1,ok
+longa,super_grande,100000,Shell Sort,1,1.280914,3914359,2988661,1,ok
+longa,super_grande,100000,Merge Sort,1,0.676040,1566777,1636563,1,ok
+longa,super_grande,100000,Quick Sort,1,0.903971,1855002,1771285,1,ok
+longa,super_grande,100000,Radix Sort,1,0.321902,99999,1300000,1,ok
+longa,super_grande,100000,Shell Sort,2,1.210128,3884683,2959027,1,ok
+longa,super_grande,100000,Merge Sort,2,0.688811,1566638,1636621,1,ok
+longa,super_grande,100000,Quick Sort,2,0.934975,1906522,1822795,1,ok
+longa,super_grande,100000,Radix Sort,2,0.333121,99999,1300000,1,ok
+longa,super_grande,100000,Shell Sort,3,1.461541,4121218,3195692,1,ok
+longa,super_grande,100000,Merge Sort,3,0.682769,1566568,1636999,1,ok
+longa,super_grande,100000,Quick Sort,3,0.910531,1799483,1715636,1,ok
+longa,super_grande,100000,Radix Sort,3,0.359952,99999,1300000,1,ok

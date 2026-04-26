@@ -1,0 +1,133 @@
+Total de execucoes: 306 | timeout/exec: 900s | reps: 3
+[1/306] aleatoria pequena  pequena       (n=  1000) Insertion Sort rep1 ->   0.0848s cmp=      256711 trocas=    255723 ok
+[2/306] aleatoria pequena  pequena       (n=  1000) Selection Sort rep1 ->   0.0913s cmp=      499500 trocas=       991 ok
+[3/306] aleatoria pequena  pequena       (n=  1000) Shell Sort     rep1 ->   0.0039s cmp=       13635 trocas=      8619 ok
+[4/306] aleatoria pequena  pequena       (n=  1000) Merge Sort     rep1 ->   0.0038s cmp=        8678 trocas=      9352 ok
+[5/306] aleatoria pequena  pequena       (n=  1000) Quick Sort     rep1 ->   0.0047s cmp=       10421 trocas=      9568 ok
+[6/306] aleatoria pequena  pequena       (n=  1000) Radix Sort     rep1 ->   0.0029s cmp=         999 trocas=     13000 ok
+[7/306] aleatoria pequena  pequena       (n=  1000) Insertion Sort rep2 ->   0.0744s cmp=      258098 trocas=    257103 ok
+[8/306] aleatoria pequena  pequena       (n=  1000) Selection Sort rep2 ->   0.0891s cmp=      499500 trocas=       991 ok
+[9/306] aleatoria pequena  pequena       (n=  1000) Shell Sort     rep2 ->   0.0040s cmp=       14012 trocas=      8983 ok
+[10/306] aleatoria pequena  pequena       (n=  1000) Merge Sort     rep2 ->   0.0038s cmp=        8726 trocas=      9367 ok
+[11/306] aleatoria pequena  pequena       (n=  1000) Quick Sort     rep2 ->   0.0048s cmp=       10254 trocas=      9424 ok
+[12/306] aleatoria pequena  pequena       (n=  1000) Radix Sort     rep2 ->   0.0029s cmp=         999 trocas=     13000 ok
+[13/306] aleatoria pequena  pequena       (n=  1000) Insertion Sort rep3 ->   0.0735s cmp=      255898 trocas=    254907 ok
+[14/306] aleatoria pequena  pequena       (n=  1000) Selection Sort rep3 ->   0.0888s cmp=      499500 trocas=       993 ok
+[15/306] aleatoria pequena  pequena       (n=  1000) Shell Sort     rep3 ->   0.0039s cmp=       13795 trocas=      8781 ok
+[16/306] aleatoria pequena  pequena       (n=  1000) Merge Sort     rep3 ->   0.0038s cmp=        8716 trocas=      9370 ok
+[17/306] aleatoria pequena  pequena       (n=  1000) Quick Sort     rep3 ->   0.0048s cmp=       10484 trocas=      9641 ok
+[18/306] aleatoria pequena  pequena       (n=  1000) Radix Sort     rep3 ->   0.0029s cmp=         999 trocas=     13000 ok
+[19/306] crescente          pequena       (n=  1000) Insertion Sort rep1 ->   0.0002s cmp=         999 trocas=         0 ok
+[20/306] crescente          pequena       (n=  1000) Selection Sort rep1 ->   0.0886s cmp=      499500 trocas=         0 ok
+[21/306] crescente          pequena       (n=  1000) Shell Sort     rep1 ->   0.0015s cmp=        5457 trocas=         0 ok
+[22/306] crescente          pequena       (n=  1000) Merge Sort     rep1 ->   0.0033s cmp=        5052 trocas=      5068 ok
+[23/306] crescente          pequena       (n=  1000) Quick Sort     rep1 ->   0.0062s cmp=       10361 trocas=      9650 ok
+[24/306] crescente          pequena       (n=  1000) Radix Sort     rep1 ->   0.0025s cmp=         999 trocas=      9000 ok
+[25/306] crescente          pequena       (n=  1000) Insertion Sort rep2 ->   0.0003s cmp=         999 trocas=         0 ok
+[26/306] crescente          pequena       (n=  1000) Selection Sort rep2 ->   0.1005s cmp=      499500 trocas=         0 ok
+[27/306] crescente          pequena       (n=  1000) Shell Sort     rep2 ->   0.0012s cmp=        5457 trocas=         0 ok
+[28/306] crescente          pequena       (n=  1000) Merge Sort     rep2 ->   0.0023s cmp=        5052 trocas=      5068 ok
+[29/306] crescente          pequena       (n=  1000) Quick Sort     rep2 ->   0.0048s cmp=       10743 trocas=     10047 ok
+[30/306] crescente          pequena       (n=  1000) Radix Sort     rep2 ->   0.0020s cmp=         999 trocas=      9000 ok
+[31/306] crescente          pequena       (n=  1000) Insertion Sort rep3 ->   0.0002s cmp=         999 trocas=         0 ok
+[32/306] crescente          pequena       (n=  1000) Selection Sort rep3 ->   0.0875s cmp=      499500 trocas=         0 ok
+[33/306] crescente          pequena       (n=  1000) Shell Sort     rep3 ->   0.0012s cmp=        5457 trocas=         0 ok
+[34/306] crescente          pequena       (n=  1000) Merge Sort     rep3 ->   0.0028s cmp=        5052 trocas=      5068 ok
+[35/306] crescente          pequena       (n=  1000) Quick Sort     rep3 ->   0.0061s cmp=       11105 trocas=     10411 ok
+[36/306] crescente          pequena       (n=  1000) Radix Sort     rep3 ->   0.0026s cmp=         999 trocas=      9000 ok
+[37/306] crescente          media         (n= 10000) Insertion Sort rep1 ->   0.0028s cmp=        9999 trocas=         0 ok
+[38/306] crescente          media         (n= 10000) Selection Sort rep1 ->   8.9382s cmp=    49995000 trocas=         0 ok
+[39/306] crescente          media         (n= 10000) Shell Sort     rep1 ->   0.0160s cmp=       75243 trocas=         0 ok
+[40/306] crescente          media         (n= 10000) Merge Sort     rep1 ->   0.0320s cmp=       71712 trocas=     75392 ok
+[41/306] crescente          media         (n= 10000) Quick Sort     rep1 ->   0.0671s cmp=      146796 trocas=    139813 ok
+[42/306] crescente          media         (n= 10000) Radix Sort     rep1 ->   0.0246s cmp=        9999 trocas=    110000 ok
+[43/306] crescente          media         (n= 10000) Insertion Sort rep2 ->   0.0023s cmp=        9999 trocas=         0 ok
+[44/306] crescente          media         (n= 10000) Selection Sort rep2 ->   8.9758s cmp=    49995000 trocas=         0 ok
+[45/306] crescente          media         (n= 10000) Shell Sort     rep2 ->   0.0160s cmp=       75243 trocas=         0 ok
+[46/306] crescente          media         (n= 10000) Merge Sort     rep2 ->   0.0321s cmp=       71712 trocas=     75392 ok
+[47/306] crescente          media         (n= 10000) Quick Sort     rep2 ->   0.0696s cmp=      149079 trocas=    142004 ok
+[48/306] crescente          media         (n= 10000) Radix Sort     rep2 ->   0.0246s cmp=        9999 trocas=    110000 ok
+[49/306] crescente          media         (n= 10000) Insertion Sort rep3 ->   0.0023s cmp=        9999 trocas=         0 ok
+[50/306] crescente          media         (n= 10000) Selection Sort rep3 ->   8.9638s cmp=    49995000 trocas=         0 ok
+[51/306] crescente          media         (n= 10000) Shell Sort     rep3 ->   0.0159s cmp=       75243 trocas=         0 ok
+[52/306] crescente          media         (n= 10000) Merge Sort     rep3 ->   0.0324s cmp=       71712 trocas=     75392 ok
+[53/306] crescente          media         (n= 10000) Quick Sort     rep3 ->   0.0673s cmp=      146798 trocas=    139784 ok
+[54/306] crescente          media         (n= 10000) Radix Sort     rep3 ->   0.0243s cmp=        9999 trocas=    110000 ok
+[55/306] crescente          grande        (n= 50000) Insertion Sort rep1 ->   0.0114s cmp=       49999 trocas=         0 ok
+[56/306] crescente          grande        (n= 50000) Selection Sort rep1 -> 224.6597s cmp=  1249975000 trocas=         0 ok
+[57/306] crescente          grande        (n= 50000) Shell Sort     rep1 ->   0.0959s cmp=      455719 trocas=         0 ok
+[58/306] crescente          grande        (n= 50000) Merge Sort     rep1 ->   0.1925s cmp=      413984 trocas=    417488 ok
+[59/306] crescente          grande        (n= 50000) Quick Sort     rep1 ->   0.4246s cmp=      874408 trocas=    838198 ok
+[60/306] crescente          grande        (n= 50000) Radix Sort     rep1 ->   0.1227s cmp=       49999 trocas=    550000 ok
+[61/306] crescente          grande        (n= 50000) Insertion Sort rep2 ->   0.0112s cmp=       49999 trocas=         0 ok
+[62/306] crescente          grande        (n= 50000) Selection Sort rep2 -> 223.8501s cmp=  1249975000 trocas=         0 ok
+[63/306] crescente          grande        (n= 50000) Shell Sort     rep2 ->   0.0960s cmp=      455719 trocas=         0 ok
+[64/306] crescente          grande        (n= 50000) Merge Sort     rep2 ->   0.1894s cmp=      413984 trocas=    417488 ok
+[65/306] crescente          grande        (n= 50000) Quick Sort     rep2 ->   0.4203s cmp=      877943 trocas=    841804 ok
+[66/306] crescente          grande        (n= 50000) Radix Sort     rep2 ->   0.1450s cmp=       49999 trocas=    650000 ok
+[67/306] crescente          grande        (n= 50000) Insertion Sort rep3 ->   0.0111s cmp=       49999 trocas=         0 ok
+[68/306] crescente          grande        (n= 50000) Selection Sort rep3 -> 215.7486s cmp=  1249975000 trocas=         0 ok
+[69/306] crescente          grande        (n= 50000) Shell Sort     rep3 ->   0.0968s cmp=      455719 trocas=         0 ok
+[70/306] crescente          grande        (n= 50000) Merge Sort     rep3 ->   0.1822s cmp=      413984 trocas=    417488 ok
+[71/306] crescente          grande        (n= 50000) Quick Sort     rep3 ->   0.4031s cmp=      863638 trocas=    827311 ok
+[72/306] crescente          grande        (n= 50000) Radix Sort     rep3 ->   0.1526s cmp=       49999 trocas=    650000 ok
+[73/306] decrescente        pequena       (n=  1000) Insertion Sort rep1 ->   0.1526s cmp=      499458 trocas=    499265 ok
+[74/306] decrescente        pequena       (n=  1000) Selection Sort rep1 ->   0.1000s cmp=      499500 trocas=       564 ok
+[75/306] decrescente        pequena       (n=  1000) Shell Sort     rep1 ->   0.0029s cmp=        8443 trocas=      3813 ok
+[76/306] decrescente        pequena       (n=  1000) Merge Sort     rep1 ->   0.0033s cmp=        5049 trocas=      9904 ok
+[77/306] decrescente        pequena       (n=  1000) Quick Sort     rep1 ->   0.0048s cmp=       10718 trocas=     10002 ok
+[78/306] decrescente        pequena       (n=  1000) Radix Sort     rep1 ->   0.0020s cmp=         999 trocas=      9000 ok
+[79/306] decrescente        pequena       (n=  1000) Insertion Sort rep2 ->   0.1458s cmp=      499432 trocas=    499219 ok
+[80/306] decrescente        pequena       (n=  1000) Selection Sort rep2 ->   0.1012s cmp=      499500 trocas=       577 ok
+[81/306] decrescente        pequena       (n=  1000) Shell Sort     rep2 ->   0.0023s cmp=        8407 trocas=      3774 ok
+[82/306] decrescente        pequena       (n=  1000) Merge Sort     rep2 ->   0.0033s cmp=        5033 trocas=      9866 ok
+[83/306] decrescente        pequena       (n=  1000) Quick Sort     rep2 ->   0.0049s cmp=       10831 trocas=     10081 ok
+[84/306] decrescente        pequena       (n=  1000) Radix Sort     rep2 ->   0.0020s cmp=         999 trocas=      9000 ok
+[85/306] decrescente        pequena       (n=  1000) Insertion Sort rep3 ->   0.1416s cmp=      499453 trocas=    499258 ok
+[86/306] decrescente        pequena       (n=  1000) Selection Sort rep3 ->   0.0897s cmp=      499500 trocas=       576 ok
+[87/306] decrescente        pequena       (n=  1000) Shell Sort     rep3 ->   0.0022s cmp=        8406 trocas=      3775 ok
+[88/306] decrescente        pequena       (n=  1000) Merge Sort     rep3 ->   0.0032s cmp=        5031 trocas=      9889 ok
+[89/306] decrescente        pequena       (n=  1000) Quick Sort     rep3 ->   0.0048s cmp=       10532 trocas=      9793 ok
+[90/306] decrescente        pequena       (n=  1000) Radix Sort     rep3 ->   0.0020s cmp=         999 trocas=      9000 ok
+[91/306] decrescente        media         (n= 10000) Insertion Sort rep1 ->  14.6237s cmp=    49994520 trocas=  49992535 ok
+[92/306] decrescente        media         (n= 10000) Selection Sort rep1 ->   8.9980s cmp=    49995000 trocas=      5737 ok
+[93/306] decrescente        media         (n= 10000) Shell Sort     rep1 ->   0.0308s cmp=      118980 trocas=     52494 ok
+[94/306] decrescente        media         (n= 10000) Merge Sort     rep1 ->   0.0447s cmp=       65699 trocas=    138880 ok
+[95/306] decrescente        media         (n= 10000) Quick Sort     rep1 ->   0.0808s cmp=      152392 trocas=    145430 ok
+[96/306] decrescente        media         (n= 10000) Radix Sort     rep1 ->   0.0259s cmp=        9999 trocas=    110000 ok
+[97/306] decrescente        media         (n= 10000) Insertion Sort rep2 ->  14.5913s cmp=    49994570 trocas=  49992552 ok
+[98/306] decrescente        media         (n= 10000) Selection Sort rep2 ->   8.9892s cmp=    49995000 trocas=      5698 ok
+[99/306] decrescente        media         (n= 10000) Shell Sort     rep2 ->   0.0308s cmp=      118908 trocas=     52420 ok
+[100/306] decrescente        media         (n= 10000) Merge Sort     rep2 ->   0.0429s cmp=       65705 trocas=    138871 ok
+[101/306] decrescente        media         (n= 10000) Quick Sort     rep2 ->   0.0684s cmp=      149980 trocas=    143087 ok
+[102/306] decrescente        media         (n= 10000) Radix Sort     rep2 ->   0.0241s cmp=        9999 trocas=    110000 ok
+[103/306] decrescente        media         (n= 10000) Insertion Sort rep3 ->  14.6499s cmp=    49994452 trocas=  49992405 ok
+[104/306] decrescente        media         (n= 10000) Selection Sort rep3 ->   9.0419s cmp=    49995000 trocas=      5693 ok
+[105/306] decrescente        media         (n= 10000) Shell Sort     rep3 ->   0.0308s cmp=      118912 trocas=     52426 ok
+[106/306] decrescente        media         (n= 10000) Merge Sort     rep3 ->   0.0436s cmp=       65701 trocas=    138808 ok
+[107/306] decrescente        media         (n= 10000) Quick Sort     rep3 ->   0.0697s cmp=      152177 trocas=    145149 ok
+[108/306] decrescente        media         (n= 10000) Radix Sort     rep3 ->   0.0242s cmp=        9999 trocas=    110000 ok
+[109/306] decrescente        grande        (n= 50000) Insertion Sort rep1 -> 371.0834s cmp=  1249972552 trocas=1249962609 ok
+[110/306] decrescente        grande        (n= 50000) Selection Sort rep1 -> 227.2784s cmp=  1249975000 trocas=     28679 ok
+[111/306] decrescente        grande        (n= 50000) Shell Sort     rep1 ->   0.1866s cmp=      683224 trocas=    264774 ok
+[112/306] decrescente        grande        (n= 50000) Merge Sort     rep1 ->   0.2607s cmp=      387998 trocas=    794439 ok
+[113/306] decrescente        grande        (n= 50000) Quick Sort     rep1 ->   0.4333s cmp=      880557 trocas=    845587 ok
+[114/306] decrescente        grande        (n= 50000) Radix Sort     rep1 ->   0.1448s cmp=       49999 trocas=    650000 ok
+[115/306] decrescente        grande        (n= 50000) Insertion Sort rep2 -> 370.6131s cmp=  1249972554 trocas=1249962491 ok
+[116/306] decrescente        grande        (n= 50000) Selection Sort rep2 -> 226.8840s cmp=  1249975000 trocas=     28569 ok
+[117/306] decrescente        grande        (n= 50000) Shell Sort     rep2 ->   0.1739s cmp=      683102 trocas=    264652 ok
+[118/306] decrescente        grande        (n= 50000) Merge Sort     rep2 ->   0.2679s cmp=      388110 trocas=    794412 ok
+[119/306] decrescente        grande        (n= 50000) Quick Sort     rep2 ->   0.4083s cmp=      877584 trocas=    842735 ok
+[120/306] decrescente        grande        (n= 50000) Radix Sort     rep2 ->   0.1224s cmp=       49999 trocas=    550000 ok
+[121/306] decrescente        grande        (n= 50000) Insertion Sort rep3 -> 369.5854s cmp=  1249972441 trocas=1249962457 ok
+[122/306] decrescente        grande        (n= 50000) Selection Sort rep3 -> 226.9104s cmp=  1249975000 trocas=     28600 ok
+[123/306] decrescente        grande        (n= 50000) Shell Sort     rep3 ->   0.1744s cmp=      683218 trocas=    264768 ok
+[124/306] decrescente        grande        (n= 50000) Merge Sort     rep3 ->   0.2453s cmp=      387947 trocas=    794341 ok
+[125/306] decrescente        grande        (n= 50000) Quick Sort     rep3 ->   0.4127s cmp=      890903 trocas=    855478 ok
+[126/306] decrescente        grande        (n= 50000) Radix Sort     rep3 ->   0.1454s cmp=       49999 trocas=    650000 ok
+[127/306] repetido           pequena       (n=  1000) Insertion Sort rep1 ->   0.0003s cmp=         999 trocas=         0 ok
+[128/306] repetido           pequena       (n=  1000) Selection Sort rep1 ->   0.0874s cmp=      499500 trocas=         0 ok
+[129/306] repetido           pequena       (n=  1000) Shell Sort     rep1 ->   0.0011s cmp=        5457 trocas=         0 ok
+[130/306] repetido           pequena       (n=  1000) Merge Sort     rep1 ->   0.0023s cmp=        5052 trocas=      5068 ok
+[131/306] repetido           pequena       (n=  1000) Quick Sort     rep1 ->   0.0003s cmp=        1002 trocas=         1 ok
+[132/306] repetido           pequena       (n=  1000) Radix Sort     rep1 ->   0.0028s cmp=         999 trocas=     13000 ok

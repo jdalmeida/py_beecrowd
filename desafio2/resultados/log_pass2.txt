@@ -1,0 +1,63 @@
+Total de execucoes: 60 | timeout/exec: 600s | reps: 3
+[1/60] crescente          super_grande  (n=100000) Shell Sort     rep1 ->   0.2223s cmp=      967146 trocas=         0 ok
+[2/60] crescente          super_grande  (n=100000) Merge Sort     rep1 ->   0.4068s cmp=      877968 trocas=    884976 ok
+[3/60] crescente          super_grande  (n=100000) Quick Sort     rep1 ->   0.9165s cmp=     1829943 trocas=   1756842 ok
+[4/60] crescente          super_grande  (n=100000) Radix Sort     rep1 ->   0.3026s cmp=       99999 trocas=   1300000 ok
+[5/60] crescente          super_grande  (n=100000) Shell Sort     rep2 ->   0.2050s cmp=      967146 trocas=         0 ok
+[6/60] crescente          super_grande  (n=100000) Merge Sort     rep2 ->   0.3775s cmp=      877968 trocas=    884976 ok
+[7/60] crescente          super_grande  (n=100000) Quick Sort     rep2 ->   0.9075s cmp=     1811568 trocas=   1738320 ok
+[8/60] crescente          super_grande  (n=100000) Radix Sort     rep2 ->   0.3075s cmp=       99999 trocas=   1300000 ok
+[9/60] crescente          super_grande  (n=100000) Shell Sort     rep3 ->   0.2242s cmp=      967146 trocas=         0 ok
+[10/60] crescente          super_grande  (n=100000) Merge Sort     rep3 ->   0.3802s cmp=      877968 trocas=    884976 ok
+[11/60] crescente          super_grande  (n=100000) Quick Sort     rep3 ->   0.8688s cmp=     1838070 trocas=   1764309 ok
+[12/60] crescente          super_grande  (n=100000) Radix Sort     rep3 ->   0.3307s cmp=       99999 trocas=   1300000 ok
+[13/60] decrescente        super_grande  (n=100000) Shell Sort     rep1 ->   0.3904s cmp=     1521064 trocas=    607224 ok
+[14/60] decrescente        super_grande  (n=100000) Merge Sort     rep1 ->   0.5527s cmp=      826118 trocas=   1689008 ok
+[15/60] decrescente        super_grande  (n=100000) Quick Sort     rep1 ->   0.9185s cmp=     1847330 trocas=   1776318 ok
+[16/60] decrescente        super_grande  (n=100000) Radix Sort     rep1 ->   0.3291s cmp=       99999 trocas=   1300000 ok
+[17/60] decrescente        super_grande  (n=100000) Shell Sort     rep2 ->   0.3937s cmp=     1521126 trocas=    607283 ok
+[18/60] decrescente        super_grande  (n=100000) Merge Sort     rep2 ->   0.5521s cmp=      825968 trocas=   1688799 ok
+[19/60] decrescente        super_grande  (n=100000) Quick Sort     rep2 ->   0.9002s cmp=     1866746 trocas=   1794996 ok
+[20/60] decrescente        super_grande  (n=100000) Radix Sort     rep2 ->   0.3068s cmp=       99999 trocas=   1300000 ok
+[21/60] decrescente        super_grande  (n=100000) Shell Sort     rep3 ->   0.4142s cmp=     1521053 trocas=    607213 ok
+[22/60] decrescente        super_grande  (n=100000) Merge Sort     rep3 ->   0.5358s cmp=      826048 trocas=   1688701 ok
+[23/60] decrescente        super_grande  (n=100000) Quick Sort     rep3 ->   0.8992s cmp=     1858870 trocas=   1787507 ok
+[24/60] decrescente        super_grande  (n=100000) Radix Sort     rep3 ->   0.3323s cmp=       99999 trocas=   1300000 ok
+[25/60] repetido           super_grande  (n=100000) Shell Sort     rep1 ->   0.2394s cmp=      967146 trocas=         0 ok
+[26/60] repetido           super_grande  (n=100000) Merge Sort     rep1 ->   0.4043s cmp=      877968 trocas=    884976 ok
+[27/60] repetido           super_grande  (n=100000) Quick Sort     rep1 ->   0.0284s cmp=      100002 trocas=         1 ok
+[28/60] repetido           super_grande  (n=100000) Radix Sort     rep1 ->   0.2977s cmp=       99999 trocas=   1300000 ok
+[29/60] repetido           super_grande  (n=100000) Shell Sort     rep2 ->   0.2039s cmp=      967146 trocas=         0 ok
+[30/60] repetido           super_grande  (n=100000) Merge Sort     rep2 ->   0.4105s cmp=      877968 trocas=    884976 ok
+[31/60] repetido           super_grande  (n=100000) Quick Sort     rep2 ->   0.0397s cmp=      100002 trocas=         1 ok
+[32/60] repetido           super_grande  (n=100000) Radix Sort     rep2 ->   0.3445s cmp=       99999 trocas=   1300000 ok
+[33/60] repetido           super_grande  (n=100000) Shell Sort     rep3 ->   0.2294s cmp=      967146 trocas=         0 ok
+[34/60] repetido           super_grande  (n=100000) Merge Sort     rep3 ->   0.3874s cmp=      877968 trocas=    884976 ok
+[35/60] repetido           super_grande  (n=100000) Quick Sort     rep3 ->   0.0288s cmp=      100002 trocas=         1 ok
+[36/60] repetido           super_grande  (n=100000) Radix Sort     rep3 ->   0.2462s cmp=       99999 trocas=   1100000 ok
+[37/60] muitos repetidos   super_grande  (n=100000) Shell Sort     rep1 ->   0.4529s cmp=     1319935 trocas=    384055 ok
+[38/60] muitos repetidos   super_grande  (n=100000) Merge Sort     rep1 ->   0.6295s cmp=     1514684 trocas=   1570990 ok
+[39/60] muitos repetidos   super_grande  (n=100000) Quick Sort     rep1 ->   0.1706s cmp=      360104 trocas=    260094 ok
+[40/60] muitos repetidos   super_grande  (n=100000) Radix Sort     rep1 ->   0.3011s cmp=       99999 trocas=   1300000 ok
+[41/60] muitos repetidos   super_grande  (n=100000) Shell Sort     rep2 ->   0.3812s cmp=     1324430 trocas=    388599 ok
+[42/60] muitos repetidos   super_grande  (n=100000) Merge Sort     rep2 ->   0.6177s cmp=     1513883 trocas=   1569517 ok
+[43/60] muitos repetidos   super_grande  (n=100000) Quick Sort     rep2 ->   0.1371s cmp=      309899 trocas=    209889 ok
+[44/60] muitos repetidos   super_grande  (n=100000) Radix Sort     rep2 ->   0.3147s cmp=       99999 trocas=   1300000 ok
+[45/60] muitos repetidos   super_grande  (n=100000) Shell Sort     rep3 ->   0.3669s cmp=     1322913 trocas=    387029 ok
+[46/60] muitos repetidos   super_grande  (n=100000) Merge Sort     rep3 ->   0.6591s cmp=     1514101 trocas=   1570498 ok
+[47/60] muitos repetidos   super_grande  (n=100000) Quick Sort     rep3 ->   0.1344s cmp=      299917 trocas=    199907 ok
+[48/60] muitos repetidos   super_grande  (n=100000) Radix Sort     rep3 ->   0.3130s cmp=       99999 trocas=   1300000 ok
+[49/60] longa              super_grande  (n=100000) Shell Sort     rep1 ->   1.2809s cmp=     3914359 trocas=   2988661 ok
+[50/60] longa              super_grande  (n=100000) Merge Sort     rep1 ->   0.6760s cmp=     1566777 trocas=   1636563 ok
+[51/60] longa              super_grande  (n=100000) Quick Sort     rep1 ->   0.9040s cmp=     1855002 trocas=   1771285 ok
+[52/60] longa              super_grande  (n=100000) Radix Sort     rep1 ->   0.3219s cmp=       99999 trocas=   1300000 ok
+[53/60] longa              super_grande  (n=100000) Shell Sort     rep2 ->   1.2101s cmp=     3884683 trocas=   2959027 ok
+[54/60] longa              super_grande  (n=100000) Merge Sort     rep2 ->   0.6888s cmp=     1566638 trocas=   1636621 ok
+[55/60] longa              super_grande  (n=100000) Quick Sort     rep2 ->   0.9350s cmp=     1906522 trocas=   1822795 ok
+[56/60] longa              super_grande  (n=100000) Radix Sort     rep2 ->   0.3331s cmp=       99999 trocas=   1300000 ok
+[57/60] longa              super_grande  (n=100000) Shell Sort     rep3 ->   1.4615s cmp=     4121218 trocas=   3195692 ok
+[58/60] longa              super_grande  (n=100000) Merge Sort     rep3 ->   0.6828s cmp=     1566568 trocas=   1636999 ok
+[59/60] longa              super_grande  (n=100000) Quick Sort     rep3 ->   0.9105s cmp=     1799483 trocas=   1715636 ok
+[60/60] longa              super_grande  (n=100000) Radix Sort     rep3 ->   0.3600s cmp=       99999 trocas=   1300000 ok
+
+Resultados gravados em resultados/resultados.csv
