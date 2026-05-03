@@ -1,11 +1,6 @@
 """
 Geradores de vetores para os 8 cenarios do desafio.
 
-Garantia de "mesma situacao inicial": o gerador recebe um numpy.random.Generator
-com seed fixa por (cenario, tamanho, repeticao). O runner clona o vetor antes
-de submeter a cada algoritmo, de modo que todos os algoritmos enxergam exatamente
-o mesmo vetor de entrada.
-
 Cenarios (instrucao do desafio):
 - aleatoria pequena: vetor aleatorio em massa pequena (1.000)
 - crescente:        vetor ja ordenado de forma crescente

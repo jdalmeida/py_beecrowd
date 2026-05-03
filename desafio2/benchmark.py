@@ -1,16 +1,6 @@
 """
 Runner do desafio comparativo de algoritmos de ordenacao.
 
-Para cada combinacao (cenario, tamanho, repeticao):
-- Gera UM unico vetor (sementes deterministicas em cenarios.py).
-- Esse vetor eh COPIADO antes de ser entregue a cada algoritmo, garantindo
-  que todos os algoritmos enxerguem o MESMO vetor de entrada (requisito 4.1).
-- Cada execucao eh medida com time.perf_counter() (relogio monotonico de
-  alta resolucao do SO), com gc desabilitado durante o trecho cronometrado
-  para evitar pausas espurias.
-- Cada execucao tem um time-budget (timeout). Algoritmos O(n^2) em massas
-  super grandes podem ser cortados.
-
 Saida: resultados/resultados.csv com uma linha por execucao.
 """
 

@@ -159,14 +159,7 @@ def quick_sort(vetor: list, c: Contador) -> list:
 
 
 def _mediana_de_tres(vetor, lo, hi, c: Contador) -> None:
-    """Coloca a mediana de tres posicoes amostradas aleatoriamente em vetor[lo].
-
-    Usar tres indices aleatorios (em vez de lo/mid/hi fixos) elimina o pior caso
-    em entradas ja ordenadas: apos a particao com mediana fixa, o elemento
-    deslocado pela proria mediana fica no fim do subarray esquerdo, fazendo
-    a proxima 'mediana' escolher um pivo degenerado. Amostragem aleatoria
-    transforma todas as entradas em aleatorias do ponto de vista do pivo.
-    """
+    """Coloca a mediana de tres posicoes amostradas aleatoriamente em vetor[lo]."""
     if hi - lo >= 2:
         a = random.randint(lo, hi)
         b = random.randint(lo, hi)
