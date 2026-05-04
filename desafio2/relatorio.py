@@ -194,6 +194,26 @@ def _medias_indexadas(linhas: list[dict]):
     return out
 
 
+# Paleta consistente entre todos os graficos: cada algoritmo mantem a mesma cor.
+CORES_ALGOS = {
+    "Insertion Sort": "#1f77b4",
+    "Selection Sort": "#d62728",
+    "Shell Sort":     "#ff7f0e",
+    "Merge Sort":     "#2ca02c",
+    "Quick Sort":     "#9467bd",
+    "Radix Sort":     "#17becf",
+}
+
+
+def _fmt_ms(v_ms: float) -> str:
+    """Rotulo amigavel para tempos em ms (auto-escala us/ms/s)."""
+    if v_ms < 1:
+        return f"{v_ms * 1000:.0f} us"
+    if v_ms < 1000:
+        return f"{v_ms:.1f} ms"
+    return f"{v_ms / 1000:.2f} s"
+
+
 def gerar_graficos(linhas: list[dict], dest: Path) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     med = _medias_indexadas(linhas)
@@ -201,13 +221,14 @@ def gerar_graficos(linhas: list[dict], dest: Path) -> None:
     algos = list(ALGORITMOS.keys())
     tamanhos_ord = list(TAMANHOS.keys())
 
-    # 1) Linhas: x = n, y = indicador medio, uma curva por algoritmo
-    #    (escala log-log para acomodar O(n^2) vs O(n log n)).
+    # -----------------------------------------------------------------------
+    # 1) Linhas log-log por cenario: tempo medio (ms), comparacoes, trocas.
+    # -----------------------------------------------------------------------
     for cen in CENARIOS_ESCALAVEIS:
-        for chave_ind, nome_ind in [
-            ("tempo_s", "Tempo medio (s)"),
-            ("comparacoes", "Comparacoes medias"),
-            ("trocas", "Trocas medias"),
+        for chave_ind, nome_ind, em_ms in [
+            ("tempo_s",     "Tempo medio (ms)",   True),
+            ("comparacoes", "Comparacoes medias", False),
+            ("trocas",      "Trocas medias",      False),
         ]:
             fig, ax = plt.subplots(figsize=(10, 6))
             algo_plotado = False
@@ -216,10 +237,16 @@ def gerar_graficos(linhas: list[dict], dest: Path) -> None:
                 for tam in tamanhos_ord:
                     chave = (cen, tam, algo)
                     if chave in med:
+                        v = med[chave][chave_ind]
+                        if em_ms:
+                            v *= 1000.0  # s -> ms
                         xs.append(TAMANHOS[tam])
-                        ys.append(max(med[chave][chave_ind], 1e-12))
+                        ys.append(max(v, 1e-9))
                 if len(xs) >= 2:
-                    ax.plot(xs, ys, marker="o", label=algo)
+                    ax.plot(
+                        xs, ys, marker="o", linewidth=2, markersize=7,
+                        color=CORES_ALGOS.get(algo), label=algo,
+                    )
                     algo_plotado = True
 
             if not algo_plotado:
@@ -228,18 +255,22 @@ def gerar_graficos(linhas: list[dict], dest: Path) -> None:
 
             ax.set_xlabel("n (tamanho do vetor)")
             ax.set_ylabel(nome_ind)
-            ax.set_title(f"{nome_ind} - cenario '{cen}'")
+            ax.set_title(f"{nome_ind} - cenario '{cen}' (escala log-log)")
             ax.set_xscale("log")
             ax.set_yscale("log")
             ax.grid(True, which="both", linestyle="--", alpha=0.4)
-            ax.legend(fontsize=8)
+            ax.legend(fontsize=9, loc="best", framealpha=0.9)
             fig.tight_layout()
-            arq = dest / f"{chave_ind}_{cen.replace(' ', '_')}.png"
+            sufixo = "tempo_ms" if em_ms else chave_ind
+            arq = dest / f"{sufixo}_{cen.replace(' ', '_')}.png"
             fig.savefig(arq, dpi=130)
             plt.close(fig)
             print(f"Grafico: {arq}")
 
-    # 2) Barras: para cada tamanho fixo, comparar algoritmos em cada cenario.
+    # -----------------------------------------------------------------------
+    # 2) Barras agrupadas por tamanho: tempo medio (ms) de cada algoritmo
+    #    em cada cenario; rotulo de valor no topo de cada barra.
+    # -----------------------------------------------------------------------
     for tam in ("media", "grande", "super_grande"):
         cenarios_disp = [
             c for c in CENARIOS_ESCALAVEIS
@@ -248,28 +279,213 @@ def gerar_graficos(linhas: list[dict], dest: Path) -> None:
         if not cenarios_disp:
             continue
 
-        fig, ax = plt.subplots(figsize=(11, 6))
+        fig, ax = plt.subplots(figsize=(13, 7))
         x = np.arange(len(algos))
         largura = 0.8 / len(cenarios_disp)
+        cmap = plt.get_cmap("tab10")
         for i, cen in enumerate(cenarios_disp):
-            ys = [
-                med.get((cen, tam, a), {}).get("tempo_s", 0)
+            ys_ms = [
+                med.get((cen, tam, a), {}).get("tempo_s", 0) * 1000.0
                 for a in algos
             ]
-            ax.bar(x + i * largura, ys, largura, label=cen)
+            barras = ax.bar(
+                x + i * largura, ys_ms, largura,
+                label=cen, color=cmap(i),
+            )
+            for rect, valor in zip(barras, ys_ms):
+                if valor <= 0:
+                    continue
+                ax.text(
+                    rect.get_x() + rect.get_width() / 2,
+                    valor * 1.05,
+                    _fmt_ms(valor),
+                    ha="center", va="bottom",
+                    fontsize=7, rotation=90,
+                )
 
         ax.set_xticks(x + (len(cenarios_disp) - 1) * largura / 2)
         ax.set_xticklabels(algos, rotation=20, ha="right")
-        ax.set_ylabel("Tempo medio (s)")
+        ax.set_ylabel("Tempo medio (ms)")
         ax.set_title(f"Tempo por algoritmo - tamanho {tam} (n={TAMANHOS[tam]})")
         ax.set_yscale("log")
-        ax.grid(True, axis="y", linestyle="--", alpha=0.4)
-        ax.legend(fontsize=8)
+        ax.grid(True, axis="y", which="both", linestyle="--", alpha=0.4)
+        ax.legend(fontsize=9, loc="upper left", framealpha=0.9)
         fig.tight_layout()
         arq = dest / f"barras_tempo_{tam}.png"
         fig.savefig(arq, dpi=130)
         plt.close(fig)
         print(f"Grafico: {arq}")
+
+    # -----------------------------------------------------------------------
+    # 3) Resumo por algoritmo: cada algoritmo tem um sub-plot mostrando como
+    #    o tempo medio (ms) cresce com n para cada cenario. Da pra comparar
+    #    o comportamento dentro de um mesmo algoritmo de forma direta.
+    # -----------------------------------------------------------------------
+    fig, axes = plt.subplots(2, 3, figsize=(16, 9), sharex=True, sharey=True)
+    cmap_cen = plt.get_cmap("tab10")
+    for ax, algo in zip(axes.flat, algos):
+        for i, cen in enumerate(CENARIOS_ESCALAVEIS):
+            xs, ys = [], []
+            for tam in tamanhos_ord:
+                chave = (cen, tam, algo)
+                if chave in med:
+                    xs.append(TAMANHOS[tam])
+                    ys.append(max(med[chave]["tempo_s"] * 1000.0, 1e-9))
+            if len(xs) >= 2:
+                ax.plot(
+                    xs, ys, marker="o", linewidth=1.8,
+                    color=cmap_cen(i), label=cen,
+                )
+        ax.set_title(algo, fontsize=11)
+        ax.set_xscale("log")
+        ax.set_yscale("log")
+        ax.grid(True, which="both", linestyle="--", alpha=0.4)
+
+    for ax in axes[-1, :]:
+        ax.set_xlabel("n")
+    for ax in axes[:, 0]:
+        ax.set_ylabel("Tempo medio (ms)")
+
+    handles, labels = axes[0, 0].get_legend_handles_labels()
+    fig.legend(
+        handles, labels, loc="lower center", ncol=len(CENARIOS_ESCALAVEIS),
+        fontsize=9, bbox_to_anchor=(0.5, -0.01),
+    )
+    fig.suptitle("Tempo medio (ms) por algoritmo - cenarios sobrepostos",
+                 fontsize=13)
+    fig.tight_layout(rect=(0, 0.04, 1, 0.97))
+    arq = dest / "resumo_tempo_ms_por_algoritmo.png"
+    fig.savefig(arq, dpi=130)
+    plt.close(fig)
+    print(f"Grafico: {arq}")
+
+    # -----------------------------------------------------------------------
+    # 4) Heatmap: tempo medio (ms) com algoritmos nas linhas e
+    #    (cenario, tamanho) nas colunas. Otimo para um overview rapido.
+    # -----------------------------------------------------------------------
+    colunas = []
+    for cen in CENARIOS_ESCALAVEIS:
+        for tam in tamanhos_ord:
+            if any((cen, tam, a) in med for a in algos):
+                colunas.append((cen, tam))
+
+    matriz = np.full((len(algos), len(colunas)), np.nan)
+    for i, algo in enumerate(algos):
+        for j, (cen, tam) in enumerate(colunas):
+            chave = (cen, tam, algo)
+            if chave in med:
+                matriz[i, j] = med[chave]["tempo_s"] * 1000.0
+
+    fig, ax = plt.subplots(figsize=(max(10, 0.7 * len(colunas)), 5.5))
+    matriz_log = np.log10(np.where(np.isnan(matriz) | (matriz <= 0),
+                                    np.nan, matriz))
+    im = ax.imshow(matriz_log, aspect="auto", cmap="viridis")
+
+    ax.set_xticks(range(len(colunas)))
+    ax.set_xticklabels(
+        [f"{c}\n{t}" for c, t in colunas], rotation=30, ha="right", fontsize=8,
+    )
+    ax.set_yticks(range(len(algos)))
+    ax.set_yticklabels(algos)
+    ax.set_title("Tempo medio (ms) - heatmap (cor em log10 ms)")
+
+    for i in range(matriz.shape[0]):
+        for j in range(matriz.shape[1]):
+            v = matriz[i, j]
+            if np.isnan(v):
+                ax.text(j, i, "—", ha="center", va="center",
+                        color="#444444", fontsize=8)
+            else:
+                # Threshold acima da metade da escala -> fundo claro -> texto escuro.
+                vmin, vmax = np.nanmin(matriz_log), np.nanmax(matriz_log)
+                norm = (matriz_log[i, j] - vmin) / max(vmax - vmin, 1e-9)
+                cor_txt = "black" if norm > 0.55 else "white"
+                ax.text(j, i, _fmt_ms(v), ha="center", va="center",
+                        color=cor_txt, fontsize=7)
+
+    cbar = fig.colorbar(im, ax=ax)
+    cbar.set_label("log10(tempo em ms)")
+    fig.tight_layout()
+    arq = dest / "heatmap_tempo_ms.png"
+    fig.savefig(arq, dpi=130)
+    plt.close(fig)
+    print(f"Grafico: {arq}")
+
+    # -----------------------------------------------------------------------
+    # 5) Ranking horizontal: top algoritmos no maior tamanho disponivel,
+    #    um sub-plot por cenario. Mostra com clareza quem e mais rapido em
+    #    cada cenario com o valor em ms ao lado da barra.
+    # -----------------------------------------------------------------------
+    fig, axes = plt.subplots(
+        len(CENARIOS_ESCALAVEIS), 1,
+        figsize=(12, 3.0 * len(CENARIOS_ESCALAVEIS)),
+        sharex=False,
+    )
+    if len(CENARIOS_ESCALAVEIS) == 1:
+        axes = [axes]
+
+    for ax, cen in zip(axes, CENARIOS_ESCALAVEIS):
+        # Maior tamanho onde TODOS os algoritmos completaram, com fallback
+        # para o tamanho com mais cobertura caso ninguem cubra todos.
+        melhor_tam, melhor_cobertura = None, -1
+        for tam in tamanhos_ord:
+            cobertura = sum(1 for a in algos if (cen, tam, a) in med)
+            if cobertura == 0:
+                continue
+            # Prefere tamanho com cobertura maxima e, em empate, o maior n.
+            if (cobertura > melhor_cobertura
+                    or (cobertura == melhor_cobertura and TAMANHOS[tam]
+                        > TAMANHOS[melhor_tam])):
+                melhor_tam, melhor_cobertura = tam, cobertura
+        tam_alvo = melhor_tam
+        if tam_alvo is None:
+            ax.set_visible(False)
+            continue
+
+        pares = []
+        for a in algos:
+            chave = (cen, tam_alvo, a)
+            if chave in med:
+                pares.append((a, med[chave]["tempo_s"] * 1000.0))
+            else:
+                pares.append((a + " (TIMEOUT)", float("nan")))
+        # Ordena: NaN ao fundo, demais por tempo crescente.
+        pares.sort(key=lambda x: (np.isnan(x[1]), x[1]))
+        nomes = [p[0] for p in pares]
+        valores = [p[1] for p in pares]
+
+        cores = [
+            CORES_ALGOS.get(n.replace(" (TIMEOUT)", ""), "#888888")
+            for n in nomes
+        ]
+        valores_plot = [0.0 if np.isnan(v) else v for v in valores]
+        barras = ax.barh(nomes, valores_plot, color=cores)
+        ax.set_xscale("log")
+        ax.set_title(
+            f"{cen} (tamanho {tam_alvo}, n={TAMANHOS[tam_alvo]})",
+            fontsize=10,
+        )
+        ax.grid(True, axis="x", which="both", linestyle="--", alpha=0.4)
+        for rect, v in zip(barras, valores):
+            if np.isnan(v):
+                ax.text(
+                    1, rect.get_y() + rect.get_height() / 2,
+                    "TIMEOUT", va="center", fontsize=8, color="#777777",
+                )
+            else:
+                ax.text(
+                    v * 1.05, rect.get_y() + rect.get_height() / 2,
+                    _fmt_ms(v), va="center", fontsize=8,
+                )
+        ax.set_xlabel("Tempo medio (ms, escala log)")
+
+    fig.suptitle("Ranking de tempo medio (ms) por cenario - maior n disponivel",
+                 fontsize=13)
+    fig.tight_layout(rect=(0, 0, 1, 0.97))
+    arq = dest / "ranking_tempo_ms.png"
+    fig.savefig(arq, dpi=130)
+    plt.close(fig)
+    print(f"Grafico: {arq}")
 
 
 # ---------------------------------------------------------------------------
