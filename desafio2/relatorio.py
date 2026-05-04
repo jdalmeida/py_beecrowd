@@ -416,76 +416,119 @@ def gerar_graficos(linhas: list[dict], dest: Path) -> None:
     #    um sub-plot por cenario. Mostra com clareza quem e mais rapido em
     #    cada cenario com o valor em ms ao lado da barra.
     # -----------------------------------------------------------------------
-    fig, axes = plt.subplots(
-        len(CENARIOS_ESCALAVEIS), 1,
-        figsize=(12, 3.0 * len(CENARIOS_ESCALAVEIS)),
-        sharex=False,
-    )
-    if len(CENARIOS_ESCALAVEIS) == 1:
-        axes = [axes]
+    def _fmt_inteiro(v: float) -> str:
+        """Numero grande de comparacoes/trocas em formato amigavel."""
+        if v >= 1e9:
+            return f"{v / 1e9:.2f} B"
+        if v >= 1e6:
+            return f"{v / 1e6:.2f} M"
+        if v >= 1e3:
+            return f"{v / 1e3:.1f} k"
+        return f"{v:.0f}"
 
-    for ax, cen in zip(axes, CENARIOS_ESCALAVEIS):
-        # Maior tamanho onde TODOS os algoritmos completaram, com fallback
-        # para o tamanho com mais cobertura caso ninguem cubra todos.
-        melhor_tam, melhor_cobertura = None, -1
-        for tam in tamanhos_ord:
-            cobertura = sum(1 for a in algos if (cen, tam, a) in med)
-            if cobertura == 0:
-                continue
-            # Prefere tamanho com cobertura maxima e, em empate, o maior n.
-            if (cobertura > melhor_cobertura
-                    or (cobertura == melhor_cobertura and TAMANHOS[tam]
-                        > TAMANHOS[melhor_tam])):
-                melhor_tam, melhor_cobertura = tam, cobertura
-        tam_alvo = melhor_tam
-        if tam_alvo is None:
-            ax.set_visible(False)
-            continue
-
-        pares = []
-        for a in algos:
-            chave = (cen, tam_alvo, a)
-            if chave in med:
-                pares.append((a, med[chave]["tempo_s"] * 1000.0))
-            else:
-                pares.append((a + " (TIMEOUT)", float("nan")))
-        # Ordena: NaN ao fundo, demais por tempo crescente.
-        pares.sort(key=lambda x: (np.isnan(x[1]), x[1]))
-        nomes = [p[0] for p in pares]
-        valores = [p[1] for p in pares]
-
-        cores = [
-            CORES_ALGOS.get(n.replace(" (TIMEOUT)", ""), "#888888")
-            for n in nomes
-        ]
-        valores_plot = [0.0 if np.isnan(v) else v for v in valores]
-        barras = ax.barh(nomes, valores_plot, color=cores)
-        ax.set_xscale("log")
-        ax.set_title(
-            f"{cen} (tamanho {tam_alvo}, n={TAMANHOS[tam_alvo]})",
-            fontsize=10,
+    def _gerar_ranking(campo: str, titulo: str, eixo_x: str,
+                       fmt_valor, escala_valor, arquivo: str) -> None:
+        fig, axes = plt.subplots(
+            len(CENARIOS_ESCALAVEIS), 1,
+            figsize=(12, 3.0 * len(CENARIOS_ESCALAVEIS)),
+            sharex=False,
         )
-        ax.grid(True, axis="x", which="both", linestyle="--", alpha=0.4)
-        for rect, v in zip(barras, valores):
-            if np.isnan(v):
-                ax.text(
-                    1, rect.get_y() + rect.get_height() / 2,
-                    "TIMEOUT", va="center", fontsize=8, color="#777777",
-                )
-            else:
-                ax.text(
-                    v * 1.05, rect.get_y() + rect.get_height() / 2,
-                    _fmt_ms(v), va="center", fontsize=8,
-                )
-        ax.set_xlabel("Tempo medio (ms, escala log)")
+        if len(CENARIOS_ESCALAVEIS) == 1:
+            axes = [axes]
 
-    fig.suptitle("Ranking de tempo medio (ms) por cenario - maior n disponivel",
-                 fontsize=13)
-    fig.tight_layout(rect=(0, 0, 1, 0.97))
-    arq = dest / "ranking_tempo_ms.png"
-    fig.savefig(arq, dpi=130)
-    plt.close(fig)
-    print(f"Grafico: {arq}")
+        for ax, cen in zip(axes, CENARIOS_ESCALAVEIS):
+            # Maior tamanho com mais cobertura de algoritmos (em empate,
+            # vence o n maior).
+            melhor_tam, melhor_cobertura = None, -1
+            for tam in tamanhos_ord:
+                cobertura = sum(1 for a in algos if (cen, tam, a) in med)
+                if cobertura == 0:
+                    continue
+                if (cobertura > melhor_cobertura
+                        or (cobertura == melhor_cobertura and TAMANHOS[tam]
+                            > TAMANHOS[melhor_tam])):
+                    melhor_tam, melhor_cobertura = tam, cobertura
+            tam_alvo = melhor_tam
+            if tam_alvo is None:
+                ax.set_visible(False)
+                continue
+
+            pares = []
+            for a in algos:
+                chave = (cen, tam_alvo, a)
+                if chave in med:
+                    pares.append((a, escala_valor(med[chave][campo])))
+                else:
+                    pares.append((a + " (TIMEOUT)", float("nan")))
+            pares.sort(key=lambda x: (np.isnan(x[1]), x[1]))
+            nomes = [p[0] for p in pares]
+            valores = [p[1] for p in pares]
+
+            cores = [
+                CORES_ALGOS.get(n.replace(" (TIMEOUT)", ""), "#888888")
+                for n in nomes
+            ]
+            valores_plot = [
+                # Em escala log, 0 nao plota: mostra um sliver minimo.
+                max(v, 1e-9) if not np.isnan(v) else 0.0
+                for v in valores
+            ]
+            barras = ax.barh(nomes, valores_plot, color=cores)
+            ax.set_xscale("log")
+            ax.set_title(
+                f"{cen} (tamanho {tam_alvo}, n={TAMANHOS[tam_alvo]})",
+                fontsize=10,
+            )
+            ax.grid(True, axis="x", which="both", linestyle="--", alpha=0.4)
+            for rect, v in zip(barras, valores):
+                if np.isnan(v):
+                    ax.text(
+                        1, rect.get_y() + rect.get_height() / 2,
+                        "TIMEOUT", va="center", fontsize=8, color="#777777",
+                    )
+                elif v <= 0:
+                    ax.text(
+                        1, rect.get_y() + rect.get_height() / 2,
+                        "0", va="center", fontsize=8, color="#555555",
+                    )
+                else:
+                    ax.text(
+                        v * 1.05, rect.get_y() + rect.get_height() / 2,
+                        fmt_valor(v), va="center", fontsize=8,
+                    )
+            ax.set_xlabel(eixo_x)
+
+        fig.suptitle(titulo, fontsize=13)
+        fig.tight_layout(rect=(0, 0, 1, 0.97))
+        arq = dest / arquivo
+        fig.savefig(arq, dpi=130)
+        plt.close(fig)
+        print(f"Grafico: {arq}")
+
+    _gerar_ranking(
+        campo="tempo_s",
+        titulo="Ranking de tempo medio (ms) por cenario - maior n disponivel",
+        eixo_x="Tempo medio (ms, escala log)",
+        fmt_valor=_fmt_ms,
+        escala_valor=lambda v: v * 1000.0,
+        arquivo="ranking_tempo_ms.png",
+    )
+    _gerar_ranking(
+        campo="comparacoes",
+        titulo="Ranking de comparacoes medias por cenario - maior n disponivel",
+        eixo_x="Comparacoes medias (escala log)",
+        fmt_valor=_fmt_inteiro,
+        escala_valor=lambda v: v,
+        arquivo="ranking_comparacoes.png",
+    )
+    _gerar_ranking(
+        campo="trocas",
+        titulo="Ranking de trocas medias por cenario - maior n disponivel",
+        eixo_x="Trocas medias (escala log)",
+        fmt_valor=_fmt_inteiro,
+        escala_valor=lambda v: v,
+        arquivo="ranking_trocas.png",
+    )
 
 
 # ---------------------------------------------------------------------------
